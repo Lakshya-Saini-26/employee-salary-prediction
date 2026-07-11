@@ -1,23 +1,34 @@
-# 💼 Employee Salary Prediction
+# Employee Salary Prediction
 
-A complete end-to-end Machine Learning project that predicts employee salaries based on demographic and professional information. The project includes data preprocessing, exploratory data analysis (EDA), model comparison, hyperparameter tuning, and deployment using Flask.
+An end-to-end machine learning project that predicts employee salaries based on age, education level, job title, gender, and years of experience.
 
----
+The project covers the complete workflow, including data cleaning, exploratory data analysis, feature engineering, model training, model evaluation, and deployment using Flask.
 
-## 🚀 Features
+## Live Demo
 
-- Predict employee salary in real time
-- Clean and user-friendly web interface
-- Data cleaning and preprocessing pipeline
-- Exploratory Data Analysis (EDA)
-- Multiple regression models trained and compared
-- Hyperparameter tuning using GridSearchCV
-- Final model saved using Joblib
-- Flask web application for deployment
+https://employee-salary-prediction-3rzf.onrender.com/
+
+> The application is hosted on Render's free tier. The first request may take a few seconds if the server is waking up.
 
 ---
 
-## 📊 Dataset Features
+## Screenshots
+
+### Correlation Heatmap
+
+![Correlation Heatmap](images/corr.png)
+
+### Home Page
+
+![Home Page](images/home.png)
+
+### Prediction Result
+
+![Prediction Result](images/prediction.png)
+
+---
+
+## Dataset Features
 
 - Age
 - Gender
@@ -25,52 +36,51 @@ A complete end-to-end Machine Learning project that predicts employee salaries b
 - Job Title
 - Years of Experience
 
-**Target Variable**
+**Target**
 
 - Salary
 
 ---
 
-## 🧠 Machine Learning Workflow
+## Project Workflow
 
 - Data Cleaning
-- Handling Missing Values
-- Removing Duplicate Records
-- Outlier Detection
+- Missing Value Handling
+- Duplicate Removal
+- Outlier Investigation
 - Exploratory Data Analysis
 - Feature Encoding
 - Feature Scaling
 - Model Training
 - Model Evaluation
 - Hyperparameter Tuning
-- Model Serialization
-- Flask Deployment
+- Model Deployment
 
 ---
 
-## 🤖 Models Trained
+## Models Used
 
 - Linear Regression
-- Naive Bayes Regressor
-- Decision Tree Regressor
-- Random Forest Regressor ✅ (Best Model)
-- Support Vector Regressor (SVR)
 - K-Nearest Neighbors Regressor
+- Decision Tree Regressor
+- Random Forest Regressor
+- Random Forest with GridSearchCV
 
-
----
-
-## 📈 Best Model Performance
-
-| Metric | Score |
-|--------|------:|
-| R² Score | **0.8903** |
-| MAE | **9907.79** |
-| RMSE | **14645.81** |
+Random Forest produced the best overall performance and was selected for deployment.
 
 ---
 
-## 🛠 Tech Stack
+## Model Performance
+
+| Metric | Value |
+|---------|------:|
+| R² Score | **0.89** |
+| MAE | **9,907.79** |
+| RMSE | **14,645.81** |
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
@@ -85,51 +95,68 @@ A complete end-to-end Machine Learning project that predicts employee salaries b
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 employee-salary-prediction/
 │
 ├── App/
 │   ├── app.py
-│   ├── templates/
 │   ├── static/
+│   └── templates/
 │
 ├── Data/Salary Data.csv
+├── images/
+│   ├── corr.png
+│   ├── home.png
+│   └── prediction.png
+│
 ├── Models/
-├── Notebooks/
+│   ├── RF_employees.pkl
+│   ├── scaler.pkl
+│   └── columns.pkl
+│
+├── Notebooks/Employee_Salary_Prediction.ipynb
+│
+├── requirements.txt
 ├── README.md
 └── .gitignore
-└── requirements.txt
 ```
 
 ---
 
-## ▶️ Running the Project
+## Installation
 
 ```bash
-git clone <>
+git clone https://github.com/Lakshya-Saini-26/employee-salary-prediction.git
 
 cd employee-salary-prediction
 
-pip install -r App/requirements.txt
+pip install -r requirements.txt
 
 cd App
 
 python app.py
 ```
 
+Open:
+
+```
+http://127.0.0.1:5000
+```
+
 ---
 
+## Acknowledgements
 
-## 🤝 AI Assistance
-
-AI-assisted development tools were used to accelerate the Flask deployment and frontend scaffolding. All machine learning experimentation, preprocessing decisions, model training, evaluation, and model selection were performed by me.
+The Flask frontend and deployment setup were developed with the assistance of AI tools. Data preprocessing, exploratory data analysis, model training, evaluation, and model selection were completed by me as part of my machine learning journey.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Lakshya Saini**
+Lakshya Saini
 
-B.Sc. Statistics Student | Aspiring Data Scientist | Machine Learning Enthusiast
+B.Sc. Statistics Student
+
+GitHub: https://github.com/Lakshya-Saini-26
